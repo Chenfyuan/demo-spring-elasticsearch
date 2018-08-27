@@ -1,4 +1,4 @@
-package ly.cloud.cache.lyspringlasticsearch.elasticsearch.es;
+package demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.es;
 
 /**
  * Description: ly-spring-lasticsearch

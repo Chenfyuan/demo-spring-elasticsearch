@@ -1,6 +1,6 @@
-package ly.cloud.cache.lyspringlasticsearch.elasticsearch.dao;
+package demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.dao;
 
-import ly.cloud.cache.lyspringlasticsearch.elasticsearch.entity.Article;
+import demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.entity.Article;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +16,7 @@ public interface ArticleDao extends ElasticsearchRepository<Article, String> {
      * 根据Id查找
      *
      * @param id
-     * @return ly.cloud.cache.lyspringlasticsearch.elasticsearch.entity.Article
+     * @return Article
      * @author linweijian
      * @date 2018/8/27 15:55
      **/

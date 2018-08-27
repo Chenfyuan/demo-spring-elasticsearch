@@ -1,7 +1,7 @@
-package ly.cloud.cache.lyspringlasticsearch.elasticsearch.entity;
+package demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.entity;
 
-import ly.cloud.cache.lyspringlasticsearch.elasticsearch.annotation.ESField;
-import ly.cloud.cache.lyspringlasticsearch.elasticsearch.annotation.ESId;
+import demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.annotation.ESField;
+import demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.annotation.ESId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;

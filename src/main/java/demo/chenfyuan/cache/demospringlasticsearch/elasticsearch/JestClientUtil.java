@@ -1,4 +1,4 @@
-package ly.cloud.cache.lyspringlasticsearch.elasticsearch;
+package demo.chenfyuan.cache.demospringlasticsearch.elasticsearch;
 /**
  * Description: 通过jestclient操作elasticsearch
  * <p>

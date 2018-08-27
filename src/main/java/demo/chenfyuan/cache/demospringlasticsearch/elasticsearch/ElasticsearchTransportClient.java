@@ -1,4 +1,4 @@
-package ly.cloud.cache.lyspringlasticsearch.elasticsearch;
+package demo.chenfyuan.cache.demospringlasticsearch.elasticsearch;
 
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
 import org.elasticsearch.action.index.IndexResponse;

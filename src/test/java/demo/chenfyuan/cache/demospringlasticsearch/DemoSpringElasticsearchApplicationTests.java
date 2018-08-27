@@ -1,7 +1,7 @@
-package ly.cloud.cache.lyspringlasticsearch;
+package demo.chenfyuan.cache.demospringlasticsearch;
 
-import ly.cloud.cache.lyspringlasticsearch.elasticsearch.dao.ArticleDao;
-import ly.cloud.cache.lyspringlasticsearch.elasticsearch.entity.Article;
+import demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.dao.ArticleDao;
+import demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.entity.Article;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class LySpringLasticsearchApplicationTests {
+public class DemoSpringElasticsearchApplicationTests {
 
     @Resource
     private ArticleDao articleDao;
