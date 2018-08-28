@@ -1,10 +1,9 @@
 package demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.entity;
 
-import demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.annotation.ESField;
-import demo.chenfyuan.cache.demospringlasticsearch.elasticsearch.annotation.ESId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,36 +13,24 @@ import java.util.Date;
  * Description: ly-spring-lasticsearch
  * <p>
  * Created by linweijian on 2018/8/27 10:43
+ * @author linweijian
  */
 
 @Document(indexName = "book", type = "article", shards = 1, replicas = 0, refreshInterval = "-1")
-public class Article implements Serializable {
+public class Article implements Serializable, Cloneable {
 
     @Id
-    @ESId
     private String id;
-
-
-    @Field
-    @ESField
+    @Field(  analyzer = "smartcn",searchAnalyzer = "smartcn")
     private String categoryId;
-
-
-    @Field
-    @ESField
+    @Field(analyzer = "smartcn",searchAnalyzer = "smartcn")
     private String authorId;
-
-    @Field
-    @ESField
+    @Field(analyzer = "smartcn",searchAnalyzer = "smartcn")
     private String name;
-
-    @Field
-    @ESField
+    @Field(analyzer = "smartcn",searchAnalyzer = "smartcn")
     private String content;
-
-    @Field
-    @ESField
-    private Date createTime;
+    @Field(type = FieldType.Date)
+    private String createTime;
 
     public String getId() {
         return id;
@@ -85,11 +72,11 @@ public class Article implements Serializable {
         this.content = content;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
@@ -103,5 +90,11 @@ public class Article implements Serializable {
                 ", content='" + content + '\'' +
                 ", createTime=" + createTime +
                 '}';
+    }
+
+    @Override
+    protected Article clone() throws CloneNotSupportedException {
+        return (Article) super.clone();
+
     }
 }
